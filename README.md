@@ -4,7 +4,7 @@
 
 ##知识点列表
 
-堆内存
+###堆内存
 堆内存分为
 新生代： Eden, S0，S1
 大部分对象创建和销毁的地区。Eden区用来作为对象初始分配的区域，而2个Survivor区域用来放置从Minor GC保留下来的对象。
@@ -29,6 +29,28 @@
 3. 老年代和新生代比例
 
     `-XX:NewRatia=value`
+
+需要注意的是在JVM内部，堆的大小开始是最小值，然后随着内存的需求不断增长而逐渐扩大（包括新生代，老年代等区域）
+
+1、大部分对象创建都是在Eden的，除了个别大对象外。
+2、Minor GC开始前，to-survivor是空的，from-survivor是由对象的。
+3、Minor GC后，Eden的存活对象都copy到to-survivor中，from-survivor的存活对象也复制to-survivor中。其中所有对象的年龄+1
+4、from-survivor清空，成为新的to-survivor，带有对象的to-survivor变成新的from-survivor。重复回到步骤2
+
+###堆外内存
+JMC/JConsole的内存管理界面会统计部分非堆内存，但是信息有限
+
+NMT特性对JVM分析，可以提供详细的分类信息
+
+使用NMT需要做一些准备工作：
+
+1. 开启NMT summary模式
+
+`-XX:NativeMemoryTracking=summary`
+
+2. 选择退出应用是打印NMT信息
+
+`-XX:NativeMemoryTracking=summary`
 
 
 
