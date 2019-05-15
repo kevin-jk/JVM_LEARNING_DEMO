@@ -1,0 +1,151 @@
+Compiled from "ExceptionDemo.java"
+public class com.kun.learning.jvm.exc.ExceptionDemo extends java.lang.Object
+  SourceFile: "ExceptionDemo.java"
+  minor version: 0
+  major version: 52
+  Constant pool:   //常量池，用来存放各种常量以及符号引用
+const #1 = Method	#16.#40;	//  java/lang/Object."<init>":()V
+const #2 = Method	#15.#41;	//  com/kun/learning/jvm/exc/ExceptionDemo.mayBeThrowException:(Z)V
+const #3 = Field	#42.#43;	//  java/lang/System.out:Ljava/io/PrintStream;
+const #4 = String	#44;	//  finally
+const #5 = Method	#45.#46;	//  java/io/PrintStream.println:(Ljava/lang/String;)V
+const #6 = class	#47;	//  java/lang/Exception
+const #7 = class	#48;	//  java/lang/StringBuilder
+const #8 = Method	#7.#40;	//  java/lang/StringBuilder."<init>":()V
+const #9 = String	#49;	//  Cache exception, e:
+const #10 = Method	#7.#50;	//  java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+const #11 = Method	#7.#51;	//  java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+const #12 = Method	#7.#52;	//  java/lang/StringBuilder.toString:()Ljava/lang/String;
+const #13 = String	#33;	//  mayBeThrowException
+const #14 = Method	#6.#53;	//  java/lang/Exception."<init>":(Ljava/lang/String;)V
+const #15 = class	#54;	//  com/kun/learning/jvm/exc/ExceptionDemo
+const #16 = class	#55;	//  java/lang/Object
+const #17 = Asciz	<init>;
+const #18 = Asciz	()V;
+const #19 = Asciz	Code;
+const #20 = Asciz	LineNumberTable;
+const #21 = Asciz	LocalVariableTable;
+const #22 = Asciz	this;
+const #23 = Asciz	Lcom/kun/learning/jvm/exc/ExceptionDemo;;
+const #24 = Asciz	main;
+const #25 = Asciz	([Ljava/lang/String;)V;
+const #26 = Asciz	e;
+const #27 = Asciz	Ljava/lang/Exception;;
+const #28 = Asciz	args;
+const #29 = Asciz	[Ljava/lang/String;;
+const #30 = Asciz	StackMapTable;
+const #31 = class	#47;	//  java/lang/Exception
+const #32 = class	#56;	//  java/lang/Throwable
+const #33 = Asciz	mayBeThrowException;
+const #34 = Asciz	(Z)V;
+const #35 = Asciz	flag;
+const #36 = Asciz	Z;
+const #37 = Asciz	Exceptions;
+const #38 = Asciz	SourceFile;
+const #39 = Asciz	ExceptionDemo.java;
+const #40 = NameAndType	#17:#18;//  "<init>":()V
+const #41 = NameAndType	#33:#34;//  mayBeThrowException:(Z)V
+const #42 = class	#57;	//  java/lang/System
+const #43 = NameAndType	#58:#59;//  out:Ljava/io/PrintStream;
+const #44 = Asciz	finally;
+const #45 = class	#60;	//  java/io/PrintStream
+const #46 = NameAndType	#61:#62;//  println:(Ljava/lang/String;)V
+const #47 = Asciz	java/lang/Exception;
+const #48 = Asciz	java/lang/StringBuilder;
+const #49 = Asciz	Cache exception, e:;
+const #50 = NameAndType	#63:#64;//  append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+const #51 = NameAndType	#63:#65;//  append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+const #52 = NameAndType	#66:#67;//  toString:()Ljava/lang/String;
+const #53 = NameAndType	#17:#62;//  "<init>":(Ljava/lang/String;)V
+const #54 = Asciz	com/kun/learning/jvm/exc/ExceptionDemo;
+const #55 = Asciz	java/lang/Object;
+const #56 = Asciz	java/lang/Throwable;
+const #57 = Asciz	java/lang/System;
+const #58 = Asciz	out;
+const #59 = Asciz	Ljava/io/PrintStream;;
+const #60 = Asciz	java/io/PrintStream;
+const #61 = Asciz	println;
+const #62 = Asciz	(Ljava/lang/String;)V;
+const #63 = Asciz	append;
+const #64 = Asciz	(Ljava/lang/String;)Ljava/lang/StringBuilder;;
+const #65 = Asciz	(Ljava/lang/Object;)Ljava/lang/StringBuilder;;
+const #66 = Asciz	toString;
+const #67 = Asciz	()Ljava/lang/String;;
+
+{
+public com.kun.learning.jvm.exc.ExceptionDemo();
+  Code:
+   Stack=1, Locals=1, Args_size=1
+   0:	aload_0
+   1:	invokespecial	#1; //Method java/lang/Object."<init>":()V
+   4:	return
+  LineNumberTable: 
+   line 6: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lcom/kun/learning/jvm/exc/ExceptionDemo;
+
+
+public static void main(java.lang.String[]);
+  Code:
+   Stack=3, Locals=3, Args_size=1
+   0:	iconst_1
+   1:	invokestatic	#2; //Method mayBeThrowException:(Z)V
+   4:	getstatic	#3; //Field java/lang/System.out:Ljava/io/PrintStream;
+   7:	ldc	#4; //String finally
+   9:	invokevirtual	#5; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   12:	goto	63
+   15:	astore_1
+   16:	getstatic	#3; //Field java/lang/System.out:Ljava/io/PrintStream;
+   19:	new	#7; //class java/lang/StringBuilder
+   22:	dup
+   23:	invokespecial	#8; //Method java/lang/StringBuilder."<init>":()V
+   26:	ldc	#9; //String Cache exception, e:
+   28:	invokevirtual	#10; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   31:	aload_1
+   32:	invokevirtual	#11; //Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   35:	invokevirtual	#12; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   38:	invokevirtual	#5; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   41:	getstatic	#3; //Field java/lang/System.out:Ljava/io/PrintStream;
+   44:	ldc	#4; //String finally
+   46:	invokevirtual	#5; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   49:	goto	63
+   52:	astore_2
+   53:	getstatic	#3; //Field java/lang/System.out:Ljava/io/PrintStream;
+   56:	ldc	#4; //String finally
+   58:	invokevirtual	#5; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   61:	aload_2
+   62:	athrow
+   63:	return
+  Exception table:
+   from   to  target type
+     0     4    15   Class java/lang/Exception                // 异常表条目
+     0     4    52   any
+    15    41    52   any
+  LineNumberTable: 
+   line 9: 0
+   line 13: 4
+   line 14: 12
+   line 10: 15
+   line 11: 16
+   line 13: 41
+   line 14: 49
+   line 13: 52
+   line 15: 63
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   16      25      1    e       Ljava/lang/Exception;
+   0      64      0    args       [Ljava/lang/String;
+
+  StackMapTable: number_of_entries = 3
+   frame_type = 79 /* same_locals_1_stack_item */
+     stack = [ class java/lang/Exception ]
+   frame_type = 100 /* same_locals_1_stack_item */
+     stack = [ class java/lang/Throwable ]
+   frame_type = 10 /* same */
+
+
+}
+
